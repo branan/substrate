@@ -312,6 +312,7 @@ fn to_bound<N: FixedPointOperand, D: FixedPointOperand, R: Bounded>(n: N, m: D) 
 	}
 }
 
+#[macro_export]
 macro_rules! implement_fixed {
 	(
 		$name:ident,
