@@ -312,6 +312,7 @@ fn to_bound<N: FixedPointOperand, D: FixedPointOperand, R: Bounded>(n: N, m: D) 
 	}
 }
 
+#[macro_export]
 macro_rules! implement_fixed {
 	(
 		$name:ident,
@@ -1617,4 +1618,13 @@ implement_fixed!(
 	1_000_000_000_000_000_000,
 	"_Fixed Point 128 bits unsigned, range = \
 		[0.000000000000000000, 340282366920938463463.374607431768211455]_",
+);
+
+implement_fixed!(
+	FixedU128P27,
+	test_fixed_u128_p27,
+	u128,
+	false,
+	1_000_000_000_000_000_000_000_000_000,
+	"_Fixed Point 128 bits unsigned with 27 precision",
 );
